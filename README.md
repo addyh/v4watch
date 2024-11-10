@@ -29,7 +29,7 @@ cd v4watch
 chmod +x v4watch.sh
 
 # Optionally, move it to a directory in your PATH for easy use
-mv v4watch.sh /usr/local/bin/v4watch
+sudo mv v4watch.sh /usr/local/bin/v4watch
 ```
 
 ## Usage
