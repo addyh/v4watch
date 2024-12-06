@@ -1,5 +1,5 @@
 #!/bin/sh
-# Version: 2024.11.9.214842
+# Version: 2024.12.6.142035
 
 fail() {
 	[ -n "$1" ] && echo "Error: $1" >&2
@@ -8,7 +8,7 @@ fail() {
 	exit 1
 }
 
-version="v4watch version 1.2"
+version="v4watch version 1.3.0"
 config_setting=""
 ignore_fields=""
 device=""
@@ -113,7 +113,7 @@ fi
 
 # Apply color formatting
 command="$command | \
-	sed -E \"s/(value=[0-9]+)/\x1b[36m\1\x1b[0m/g\" | \
+	sed -E \"s/(value=[0-9]+( \([^)]*\))?)/\x1b[36m\1\x1b[0m/g\" | \
 	sed -E \"s/($config_setting)/\x1b[32m\1\x1b[0m/g\""
 
 # Conditionally include hex values if --show-hex or -x is specified
